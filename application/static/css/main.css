@@ -1,0 +1,5 @@
+.small-image {
+    width: 250px;  /* Set the desired width */
+    height: 200px;  /* Set the desired height */
+    object-fit: cover;  /* Ensures the aspect ratio is maintained and the image is not distorted */
+}
