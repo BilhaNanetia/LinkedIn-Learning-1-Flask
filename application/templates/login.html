@@ -1,16 +1,21 @@
-                {% extends "layout.html" %}
+{% extends "layout.html" %}
 
-                {% block content %}
-                <h2>Login</h2>
-                <form method="POST" action="{{ url_for('login') }}">
-                    <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Login</button>
-                </form>
-                {% endblock %}
+{% block content %}
+<h2 style="text-align: center; color: #333;">Login</h2>
+<form method="POST" action="{{ url_for('login') }}" style="max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 5px;">
+    <div class="form-group" style="margin-bottom: 15px;">
+        <label for="username" style="display: block; font-weight: bold; margin-bottom: 5px;">Username</label>
+        <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required 
+               style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+    </div>
+    <div class="form-group" style="margin-bottom: 15px;">
+        <label for="password" style="display: block; font-weight: bold; margin-bottom: 5px;">Password</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required 
+               style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+    </div>
+    <button type="submit" class="btn btn-primary" 
+            style="background-color: #007bff; border: none; padding: 10px 20px; color: #fff; border-radius: 4px; cursor: pointer;">
+        Login
+    </button>
+</form>
+{% endblock %}
